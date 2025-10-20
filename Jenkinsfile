@@ -5,7 +5,7 @@ pipeline {
         stage('Preparar entorno') {
             steps {
                 echo "Creando entorno virtual..."
-                bat 'C:\Users\quisp\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.12\Python.exe' -m venv venv'
+                bat '"C:\\Users\\quisp\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.12\\Python.exe" -m venv venv'
                 bat 'venv\\Scripts\\activate && pip install -r requirements.txt'
             }
         }
