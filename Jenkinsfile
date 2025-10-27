@@ -24,7 +24,7 @@ pipeline {
                 stage('Simular plan') {
             steps {
                 echo 'Simulando infraestructura...'
-                bat "${env.TERRAFORM_PATH} plan-out=plan.txt"
+                bat "${env.TERRAFORM_PATH} plan -out=plan.txt"
             }
         }
                 stage('Aplicar simulación') {
