@@ -37,7 +37,7 @@ pipeline {
 
     post {
         success { 
-            archiveArtifacts artifacts: '*.txt, plan.txt, fingerprint: true
+            archiveArtifacts artifacts: '*.txt, plan.txt', fingerprint: true
             echo "✅ Infraestructura simulada creada con éxito." }
         failure { echo "❌ Error en alguna etapa del pipeline o en la configuración Terraform" }
     }
